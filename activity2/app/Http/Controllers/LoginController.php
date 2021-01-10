@@ -18,7 +18,7 @@ class LoginController extends Controller
         $result = $service->login($user);
         if($result) {
             // Successful login attempt
-            return view('loginPassed')->with('user', $user);
+            return view('loginPassed2')->with('user', $user);
         }
         return view('loginFailed');
         }
