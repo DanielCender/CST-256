@@ -28,6 +28,11 @@ Route::get('/login2', function ()
 {
     return view('login2');
 });
+Route::get('/login3', function ()
+{
+    return view('login3');
+});
 
 
 Route::post('/dologin','App\Http\Controllers\LoginController@index');
+Route::post('/dologin3', 'App\Http\Controllers\Login3Controller@index');
