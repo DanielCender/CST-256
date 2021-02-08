@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Log;
 
 
 class MyLogger1 implements ILogger {
-	private static function getLogger() {
+	public static function getLogger() {
 	return null;
 	}
 	public function info($param) {

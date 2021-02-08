@@ -38,3 +38,5 @@ Route::post('/dologin','App\Http\Controllers\LoginController@index');
 Route::post('/dologin3', 'App\Http\Controllers\Login3Controller@index');
 
 Route::resource('/usersrest', 'App\Http\Controllers\UsersRestController');
+
+Route::get('/testapi', 'App\Http\Controllers\RestClientController@index');
