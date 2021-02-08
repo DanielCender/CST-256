@@ -24,7 +24,7 @@ class MySecurityMiddleware
         $secureCheck = true;
         if ($request->is('/') || $request->is('login3') || $request->is('dologin3') ||
             $request->is('usersrest') || $request->is('usersrest/*') ||
-            $request->is('loggingservice'))
+            $request->is('loggingservice/*'))
         {
             $secureCheck = false;
         }
