@@ -5,6 +5,7 @@
  *
  */
 namespace App\Models;
+use JsonSerializable;
 
 class UserModel implements JsonSerializable
 {

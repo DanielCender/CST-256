@@ -7,6 +7,8 @@
  */
 namespace App\Models;
 
+use JsonSerializable;
+
 class DTO implements JsonSerializable {
 	public $data;
 	public $errorCode;

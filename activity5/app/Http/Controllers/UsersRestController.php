@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\Business\SecurityService;
+use App\Models\DTO;
 
 class UsersRestController extends Controller
 {
@@ -14,9 +15,10 @@ class UsersRestController extends Controller
      */
     public function index()
     {
-        //
         $service = new SecurityService();
-        return $service->getAllUsers();
+        $dto = new DTO();
+        $dto->data = $service->getAllUsers();
+        return $dto;
     }
 
     /**
@@ -27,6 +29,9 @@ class UsersRestController extends Controller
      */
     public function show($id)
     {
-        //
+        $service = new SecurityService();
+        $dto = new DTO();
+        $dto->data = $service->getUser($id);
+        return $dto;
     }
 }
